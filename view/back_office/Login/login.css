@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+body{
+    margin : 0;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+    background-color: #1d2634;
+    overflow: hidden;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container {
+    position: relative;
+    width: 450px; 
+    user-select: none;
+    height: 470px;
+    margin: 0 auto; 
+    background-color: #242a3c;
+    box-sizing: border-box; 
+    padding: 20px;
+    top: 200px;
+    border-radius: 10px;
+    box-shadow:
+    0px 0px 3.8px rgba(0, 0, 0, 0.15),
+    0px 0px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.container .title span{
+    user-select: none;
+    font-size: 60px;
+    color: #858994;
+    position: relative;
+    bottom: 100px;
+    left: 50px;
+}
+
+.container .title h3{
+    user-select: none;
+    font-size: 37px;
+    color: #858994;
+    position: relative;
+    bottom: 0px;
+    left: 103px;
+}
+
+
+.container .offer-form .inputBox  {
+    user-select: none;
+    position: relative;
+    width: 250px;
+}
+
+.container .offer-form .inputBox  input{
+    position: relative;
+    top: -55px ;
+    margin :20px 0 10px 67px; 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #858994;
+    background-color: #242a3c;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.container .offer-form .inputBox  span{
+    position:absolute;
+    left: 70px ; 
+    top: -36px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color:#858994;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+
+.container .offer-form .inputBox  input:valid ~ span,
+.container .offer-form .inputBox  input:focus ~ span
+{
+    color: #858994;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: #242a3c;
+    border-radius: 10px;
+}
+
+
+.container .offer-form .btn{
+    position: relative;
+    background-color: #242a3c;
+    color: #858994;
+    width: 6rem;
+    margin: 50px 10px ;
+    top: -80px;
+    left : 83px; 
+    padding: 0.7rem 0 ;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+    0px 0px 2px rgba(0, 0, 0, 0.12),
+    0px 0px 16px rgba(0, 0, 0, 0.24)
+  ;
+}
+
+.container .offer-form .btn:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0 ;
+    background-color: #ff3c78;
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+}
+
+.container .offer-form .btn:hover:after{
+    transform: scale(1,1);
+}
+
+p{
+    color: red;
+    position: relative;
+    font-size: 10px;
+    bottom: 420px;
+    margin-left: 100px;
+    z-index: 1;
+
+}
+
+.err span{
+    position: relative;
+    color: red;
+    bottom: 390px;
+    margin-left: 80px;
+    font-size: 17px;
+}
+
+.container .offer-form .showp input{
+    position: relative;
+    margin: 0;
+    filter: invert(80%) hue-rotate(180deg);
+    border: 1px solid #333;
+    left: 88px;
+    width: 12px;
+}
+.container .offer-form .showp p{
+    position: relative;
+    margin: 0;
+    color: #858994;
+    left: 110px;
+    bottom: 76px;
+}

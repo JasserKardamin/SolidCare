@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    background-color: #1d2634;
+    overflow: hidden;
+}
+
+h3 {
+    color: #858994;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    margin: 50px 0 70px 10px;
+}
+
+span {
+    color: #858994;
+}
+
+.logo h3 span {
+    color: #858994;
+    font-size: 2.3rem;
+}
+
+.grid-container {
+    background-color: #1d2634;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+        "side header"
+        "side main";
+}
+
+
+.sidebar {
+    height: 100vh;
+    background-color: #242a3c;
+    grid-area: side;
+}
+
+.header {
+    background-color: #1b222f;
+    grid-area: header;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.main {
+    height: 100vh;
+    background-color: #1d2634;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "col1 col1 col3"
+        "col2 col2 col3";
+    gap: 15px;
+    margin: 7px 13px;
+
+}
+
+
+.col1 {
+    grid-area: col1;
+    background-color: #242a3c;
+    overflow-y: auto;
+}
+
+.col2 {
+    grid-area: col2;
+    background-color: #242a3c;
+    overflow-y: hidden;
+}
+
+.col3 {
+    grid-area: col3;
+    background-color: #242a3c;
+    text-align: center;
+}
+
+
+
+
+.nav-bar {
+    height: 88%;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    padding: 1rem;
+    margin: 8px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo {
+    position: relative;
+    left: 20px;
+    font-size: 70px;
+}
+
+.logo a {
+    color: #858994;
+    font-size: 30px;
+    margin: 100px 0 0 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a span {
+    color: #858994;
+    font-size: 35px;
+    padding: 4px;
+}
+
+
+
+
+.nav-bar a {
+    font-size: 20px;
+    color: #858994;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+.nav-bar a span {
+    font-size: 1.7rem;
+}
+
+.nav-bar li {
+    padding: 1rem;
+    margin: 9px 0;
+    position: relative;
+}
+
+.nav-bar li:after {
+    content: '';
+    height: 2px;
+    width: 70%;
+    background-color: #ff3c78;
+    position: absolute;
+    left: 16px;
+    bottom: 7px;
+    opacity: 0;
+}
+
+.nav-bar li:hover::after {
+    opacity: 1;
+    transition: 1s;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.logout {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+.logout:after {
+    content: '';
+    height: 2px;
+    width: 90%;
+    background-color: #ff3c78;
+    position: absolute;
+    left: 18px;
+    bottom: 16px;
+    opacity: 0;
+}
+
+.logout:hover::after {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #242a3c;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #858994;
+    border-radius: 10px;
+}
+
+
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 10px;
+    background-color: #1b222f;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: auto;
+    max-height: 18px;
+    /* Adjust the height as needed */
+    overflow: auto;
+    position: relative;
+    left: 150px;
+    top: 20px;
+    width: 950px;
+}
+
+.content-table thead tr {
+    background-color: #1e2126;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th {
+    color: #fff;
+    padding: 12px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.content-table td {
+    word-wrap: break-word;
+    color: #fff;
+    padding: 12px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.content-table tbody tr {
+    border-bottom: 1px solid #1e2126;
+    ;
+    transition: 0.1s ease-in-out;
+}
+
+.content-table tbody tr:hover {
+    background-color: #444444;
+}
+
+
+
+
+
+
+.btn {
+    position: relative;
+    background-color: #242a3c;
+    color: #858994;
+    width: 5rem;
+    padding: 0.4rem 0;
+    margin: 20px 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0px 0px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 16px rgba(0, 0, 0, 0.24);
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    top: 33px;
+    height: 0.175rem;
+    background-color: #ff3c78;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover:after {
+    transform: scale(1, 1);
+}
+
+.title h1 {
+    color: #fff;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.col3 .offer-form .inputBox {
+    position: relative;
+    top: -30px;
+    width: 250px;
+}
+
+.col3 .offer-form .inputBox input {
+    margin: 20px 0 10px 140px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #858994;
+    background-color: #242a3c;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+.col3 .offer-form .inputBox span {
+    position: absolute;
+    left: 150px;
+    top: 18px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #858994;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+
+.col3 .offer-form .inputBox input:valid~span,
+.col3 .offer-form .inputBox input:focus~span {
+    color: #858994;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: #242a3c;
+    border-radius: 10px;
+}
+
+h3 {
+    position: relative;
+    left: 160px;
+}
+
+.btna {
+    position: relative;
+    width: 100px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #1b222f;
+    border: 0px solid;
+    border-radius: 8px;
+    color: #fff;
+    padding: 12px;
+    top: 30px;
+    left: 20px;
+    transition: 0.3s ease-in;
+}
+
+.btna:hover {
+    bottom: 10px;
+    width: 120px;
+    background-color: #2b3445;
+}

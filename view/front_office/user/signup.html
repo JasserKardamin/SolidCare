@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  
+    <section class="wrapper active">
+      <div class="form signup">
+        <header>Login</header>
+        <form action="../../../controller/front_office/user_login.php" method="post">
+          <input type="text" name = "login" placeholder="CIN">
+          <input type="password" name="pass"  placeholder="Password">
+          <a href="#">Forgot password?</a>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    
+      <div class="form login">
+        <header>Signup</header>
+        <form class="frm" action="../../../controller/front_office/signup_user.php" method="post">
+            <div class="input1">
+                <input type="text" name = "fn"  placeholder="First Name"  required>
+                <input type="text" name = "ln" placeholder="Last Name" required >
+            </div>
+            <div class="input1">
+                <input type="text" name = "email" placeholder="Email" required >
+                <input type="text" name = "phone" placeholder="Phone" required >
+            </div>
+            <div class="input1">
+                <input class="date" name = "date" type="date" placeholder="Date of birth" required>
+                <input type="text" name = "loc" placeholder="Location" required>
+            </div>
+            <div class="input1">
+                <select name="gender" name = "gender" required>
+                  <option value="" disabled selected hidden>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <input type="text" placeholder="Age" name = "age" required>
+            </div>
+            <div class="input1">
+                <input type="text" placeholder="CIN" name="cin" required>
+                <input type="password" placeholder="Password" name="pass" required>
+            </div>
+            <div class="checkbox" name="role" >
+                  <p>What are you : </p>
+                  <input type="radio" id="nurse" name="role" value="nurse">
+                  <label for="nurse">Nurse</label>
+                  <input type="radio" id="patient" name="role" value="patient">
+                  <label for="patient">Patient</label>
+            </div>
+        <div>
+            <button type="submit">Sign up</button>
+        </div>
+        
+        </form>
+      </div>
+      
+
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+  </body>
+</html>
